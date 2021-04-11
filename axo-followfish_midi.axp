@@ -1,0 +1,89 @@
+<patch-1.0 appVersion="1.0.12">
+   <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_1" x="266" y="84">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/toggle" uuid="42b8134fa729d54bfc8d62d6ef3fa99498c1de99" name="toggle_1" x="112" y="126">
+      <params>
+         <bool32.tgl name="b" value="1"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="logic/counter2" uuid="d9536f238ab92e53ac93d5927c3b43ceef998dc1" name="counter2_1" x="518" y="196">
+      <params>
+         <int32 name="maximum" value="16"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="midi/out/clock" uuid="12b916e835bb6fc9fa4f2c858d1d1a72d5cf6d08" name="clock_1" x="280" y="224">
+      <params>
+         <frac32.u.map name="bpm" value="17.5"/>
+      </params>
+      <attribs>
+         <combo attributeName="device" selection="din"/>
+      </attribs>
+   </obj>
+   <obj type="ctrl/button" uuid="ef3d13774349df85aa9bfecf30dbc91ab8488b3f" name="button_1" x="70" y="238">
+      <params>
+         <bool32.mom name="b" value="0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/ibar 16" uuid="302bfed4cde8894229679ce81f6b8a5c5212dd98" name="ibar_1" x="546" y="294">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="audio/in left" uuid="d40e60b7641fe75af4d7c91b45bb038aacafc52e" name="Kick" x="126" y="462">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="out_1" x="686" y="532">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="drj/math/sum5" uuid="2294474d114a6a7d722aed86ae23cb1212d46692" name="sum5_1" x="532" y="546">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="audio/in right" uuid="5f35c9f87b3f291a8120a10db71935bebd186469" name="Gated" x="112" y="560">
+      <params/>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="sum5_1" outlet="out"/>
+         <dest obj="out_1" inlet="left"/>
+         <dest obj="out_1" inlet="right"/>
+      </net>
+      <net>
+         <source obj="Kick" outlet="wave"/>
+         <dest obj="sum5_1" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="Gated" outlet="wave"/>
+         <dest obj="sum5_1" inlet="in2"/>
+      </net>
+      <net>
+         <source obj="button_1" outlet="o"/>
+         <dest obj="clock_1" inlet="rst"/>
+      </net>
+      <net>
+         <source obj="toggle_1" outlet="o"/>
+         <dest obj="clock_1" inlet="run"/>
+      </net>
+      <net>
+         <source obj="clock_1" outlet="pos24ppq"/>
+         <dest obj="counter2_1" inlet="inc"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>241</x>
+      <y>68</y>
+      <width>1143</width>
+      <height>806</height>
+   </windowPos>
+</patch-1.0>

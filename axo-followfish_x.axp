@@ -1,0 +1,130 @@
+<patch-1.0 appVersion="1.0.12">
+   <obj type="audio/in left" uuid="d40e60b7641fe75af4d7c91b45bb038aacafc52e" name="Kick" x="14" y="14">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="env/follower" uuid="356ce1d18ac6b51704833f94dac5dea823fb8223" name="follower_1" x="112" y="14">
+      <params/>
+      <attribs>
+         <combo attributeName="time" selection="1.3ms"/>
+      </attribs>
+   </obj>
+   <obj type="disp/ibar 16" uuid="302bfed4cde8894229679ce81f6b8a5c5212dd98" name="ibar_1" x="224" y="14">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/inv" uuid="4236d8dd952427e2aec6e830a48fddfba98dd4ad" name="inv_1" x="448" y="14">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/ibar 16" uuid="302bfed4cde8894229679ce81f6b8a5c5212dd98" name="ibar_2" x="546" y="14">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="conv/to b" uuid="91ff898f0f2bf6e4dc0165515e0be7c2281da18b" name="to_1" x="168" y="84">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/bool" uuid="a0ee71d48208b71752cbb8c05e55145106ef3946" name="bool_1" x="322" y="84">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="spectral/analyzer 24" uuid="9cec9a9e7d56bf2af1a5c2312bc5b87e7ce27b14" name="analyzer_1" x="336" y="168">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_1" x="588" y="168">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/dial p" uuid="cc5d2846c3d50e425f450c4b9851371b54f4d674" name="dial_1" x="28" y="182">
+      <params>
+         <frac32.u.map name="value" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="out_1" x="756" y="210">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_1" x="210" y="350">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA2 (ADC1_IN2)"/>
+      </attribs>
+   </obj>
+   <obj type="audio/in right" uuid="5f35c9f87b3f291a8120a10db71935bebd186469" name="Gated" x="210" y="420">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="filter/vcf" uuid="2b0aad6aeb06cc86c5802d2f167e9f281d8c35e1" name="vcf_1" x="518" y="448">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="drj/math/sum5" uuid="2294474d114a6a7d722aed86ae23cb1212d46692" name="sum5_1" x="532" y="546">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="drj/math/offset_scale_1" uuid="8943f98651aed59bf140da20c3f97585a2dffa8d" name="offset_scale_1_1" x="224" y="560">
+      <params>
+         <frac32.s.map name="offset" value="16.0"/>
+         <frac32.s.map name="scale" value="64.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="sum5_1" outlet="out"/>
+         <dest obj="out_1" inlet="left"/>
+         <dest obj="out_1" inlet="right"/>
+      </net>
+      <net>
+         <source obj="vca_1" outlet="o"/>
+         <dest obj="sum5_1" inlet="in2"/>
+      </net>
+      <net>
+         <source obj="Gated" outlet="wave"/>
+         <dest obj="vca_1" inlet="a"/>
+      </net>
+      <net>
+         <source obj="ibar_1" outlet="chain_out"/>
+         <dest obj="inv_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="Kick" outlet="wave"/>
+         <dest obj="sum5_1" inlet="in1"/>
+         <dest obj="follower_1" inlet="in"/>
+         <dest obj="analyzer_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="inv_1" outlet="out"/>
+         <dest obj="ibar_2" inlet="in"/>
+      </net>
+      <net>
+         <source obj="ibar_2" outlet="chain_out"/>
+         <dest obj="offset_scale_1_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="offset_scale_1_1" outlet="out"/>
+         <dest obj="vca_1" inlet="v"/>
+      </net>
+      <net>
+         <source obj="follower_1" outlet="amp"/>
+         <dest obj="to_1" inlet="i"/>
+      </net>
+      <net>
+         <source obj="to_1" outlet="o"/>
+         <dest obj="bool_1" inlet="in"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>538</x>
+      <y>2</y>
+      <width>1384</width>
+      <height>1025</height>
+   </windowPos>
+</patch-1.0>

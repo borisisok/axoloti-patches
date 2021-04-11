@@ -1,0 +1,216 @@
+<patch-1.0 appVersion="1.0.12">
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="Joy vertical" x="14" y="28">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA0 (ADC1_IN0)"/>
+      </attribs>
+   </obj>
+   <obj type="midi/intern/cc thin" uuid="fd6026be5e7a856b804776c5d7d4df1a4480795e" name="cc_8" x="154" y="28">
+      <params/>
+      <attribs>
+         <spinner attributeName="channel" value="1"/>
+         <spinner attributeName="cc" value="8"/>
+      </attribs>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="knob 1" x="294" y="28">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA2 (ADC1_IN2)"/>
+      </attribs>
+   </obj>
+   <obj type="midi/intern/cc thin" uuid="fd6026be5e7a856b804776c5d7d4df1a4480795e" name="cc_2" x="434" y="28">
+      <params/>
+      <attribs>
+         <spinner attributeName="channel" value="1"/>
+         <spinner attributeName="cc" value="10"/>
+      </attribs>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="knob 4" x="574" y="28">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA5 (ADC1_IN5)"/>
+      </attribs>
+   </obj>
+   <obj type="midi/intern/cc thin" uuid="fd6026be5e7a856b804776c5d7d4df1a4480795e" name="cc_5" x="714" y="28">
+      <params/>
+      <attribs>
+         <spinner attributeName="channel" value="1"/>
+         <spinner attributeName="cc" value="13"/>
+      </attribs>
+   </obj>
+   <obj type="fx/clds/clds" uuid="FD6EFF1B-3317-4BA5-A952-841327FC2F47" name="clds_1" x="896" y="28">
+      <params>
+         <frac32.u.map name="position" value="0.0"/>
+         <frac32.u.map name="size" value="0.0"/>
+         <frac32.s.map name="pitch" value="0.0"/>
+         <frac32.u.map name="density" value="0.0"/>
+         <frac32.u.map name="texture" value="0.0"/>
+         <frac32.u.map name="mix" value="0.0"/>
+         <frac32.u.map name="spread" value="0.0"/>
+         <frac32.u.map name="feedback" value="0.0"/>
+         <frac32.u.map name="reverb" value="0.0"/>
+         <int32.hradio name="playmode" value="0"/>
+         <bool32.tgl name="mono" value="0"/>
+         <bool32.tgl name="lofi" value="0"/>
+         <bool32.tgl name="silence" value="0"/>
+         <bool32.tgl name="bypass" value="0"/>
+      </params>
+      <attribs>
+         <combo attributeName="large buffer" selection="131072"/>
+         <combo attributeName="small buffer" selection="65536"/>
+      </attribs>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="joy horizontal" x="14" y="126">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA1 (ADC1_IN1)"/>
+      </attribs>
+   </obj>
+   <obj type="midi/intern/cc thin" uuid="fd6026be5e7a856b804776c5d7d4df1a4480795e" name="cc_9" x="154" y="126">
+      <params/>
+      <attribs>
+         <spinner attributeName="channel" value="1"/>
+         <spinner attributeName="cc" value="9"/>
+      </attribs>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="knob 2" x="294" y="126">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA3 (ADC1_IN3)"/>
+      </attribs>
+   </obj>
+   <obj type="midi/intern/cc thin" uuid="fd6026be5e7a856b804776c5d7d4df1a4480795e" name="cc_3" x="434" y="126">
+      <params/>
+      <attribs>
+         <spinner attributeName="channel" value="1"/>
+         <spinner attributeName="cc" value="11"/>
+      </attribs>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="knob 5" x="574" y="126">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA6 (ADC1_IN6)"/>
+      </attribs>
+   </obj>
+   <obj type="midi/intern/cc thin" uuid="fd6026be5e7a856b804776c5d7d4df1a4480795e" name="cc_6" x="714" y="126">
+      <params/>
+      <attribs>
+         <spinner attributeName="channel" value="1"/>
+         <spinner attributeName="cc" value="14"/>
+      </attribs>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="knob 3" x="294" y="224">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA4 (ADC1_IN4)"/>
+      </attribs>
+   </obj>
+   <obj type="midi/intern/cc thin" uuid="fd6026be5e7a856b804776c5d7d4df1a4480795e" name="cc_4" x="434" y="224">
+      <params/>
+      <attribs>
+         <spinner attributeName="channel" value="1"/>
+         <spinner attributeName="cc" value="12"/>
+      </attribs>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="knob 6" x="574" y="224">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA7 (ADC1_IN7)"/>
+      </attribs>
+   </obj>
+   <obj type="midi/intern/cc thin" uuid="fd6026be5e7a856b804776c5d7d4df1a4480795e" name="cc_7" x="714" y="224">
+      <params/>
+      <attribs>
+         <spinner attributeName="channel" value="1"/>
+         <spinner attributeName="cc" value="15"/>
+      </attribs>
+   </obj>
+   <obj type="midi/in/monitor" uuid="b51863ca-6afa-4d29-acfd-c8c2fe06cb16" name="monitor_1" x="28" y="266">
+      <params>
+         <bool32.tgl name="ControlChange" value="0"/>
+         <bool32.tgl name="Note" value="0"/>
+         <bool32.tgl name="ProgramChange" value="0"/>
+         <bool32.tgl name="Bend" value="0"/>
+         <bool32.tgl name="PolyPressure" value="0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/dial p" uuid="cc5d2846c3d50e425f450c4b9851371b54f4d674" name="dial_1" x="140" y="350">
+      <params>
+         <frac32.u.map name="value" MidiCC="9" value="31.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/ibar 64" uuid="6a7095211c4dc70b413bac91cc3a803c2e869a61" name="ibar_1" x="224" y="350">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="audio/in stereo" uuid="99848ad6d90a8e615e83b2e619cfc806f28e7281" name="in_1" x="28" y="490">
+      <params/>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="dial_1" outlet="out"/>
+         <dest obj="ibar_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="knob 1" outlet="out"/>
+         <dest obj="cc_2" inlet="v"/>
+         <dest obj="clds_1" inlet="spread"/>
+      </net>
+      <net>
+         <source obj="knob 2" outlet="out"/>
+         <dest obj="cc_3" inlet="v"/>
+         <dest obj="clds_1" inlet="feedback"/>
+      </net>
+      <net>
+         <source obj="knob 3" outlet="out"/>
+         <dest obj="cc_4" inlet="v"/>
+         <dest obj="clds_1" inlet="reverb"/>
+      </net>
+      <net>
+         <source obj="knob 4" outlet="out"/>
+         <dest obj="cc_5" inlet="v"/>
+         <dest obj="clds_1" inlet="position"/>
+      </net>
+      <net>
+         <source obj="knob 5" outlet="out"/>
+         <dest obj="cc_6" inlet="v"/>
+         <dest obj="clds_1" inlet="size"/>
+      </net>
+      <net>
+         <source obj="knob 6" outlet="out"/>
+         <dest obj="cc_7" inlet="v"/>
+         <dest obj="clds_1" inlet="pitch"/>
+      </net>
+      <net>
+         <source obj="Joy vertical" outlet="out"/>
+         <dest obj="cc_8" inlet="v"/>
+         <dest obj="clds_1" inlet="density"/>
+      </net>
+      <net>
+         <source obj="joy horizontal" outlet="out"/>
+         <dest obj="cc_9" inlet="v"/>
+         <dest obj="clds_1" inlet="texture"/>
+      </net>
+      <net>
+         <source obj="in_1" outlet="left"/>
+         <dest obj="clds_1" inlet="l"/>
+      </net>
+      <net>
+         <source obj="in_1" outlet="right"/>
+         <dest obj="clds_1" inlet="r"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>52</x>
+      <y>18</y>
+      <width>1286</width>
+      <height>928</height>
+   </windowPos>
+</patch-1.0>
